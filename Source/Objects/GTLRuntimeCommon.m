@@ -624,7 +624,7 @@ static IMP GTLRuntimeGetterIMP(SEL sel,
           return cachedObj;
         }
         NSMutableDictionary *dict = [obj JSONValueForKey:jsonKey];
-        if ([dict isKindOfClass:[NSMutableDictionary class]]) {
+        if ([dict isKindOfClass:[NSDictionary class]]) {
           NSDictionary *surrogates = obj.surrogates;
           GTLObject *subObj = [GTLObject objectForJSON:dict
                                           defaultClass:returnClass
